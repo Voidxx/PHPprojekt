@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="hr">
+    <head>
+
+
+        
+        <title>Index</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="title" content="Naslov" >
+        <meta name="author" content="Leon Sedlanić">
+        <meta name="keywords" content="FOI, WebDiP">
+        <meta name="description" content="meta podatci">
+        <link rel="stylesheet" href="css/lsedlanic.css" type="text/css"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <script src="js/script_jquery.js"></script>
+        
+        <style>
+            
+            h1{
+                font-size: 2em;
+            }
+              h2{
+                font-size: 1.5em;
+            }
+              h3{
+                font-size: 1em;
+            }
+              h4{
+                font-size: 0.9em;
+            }
+              h5{
+                font-size: 0.7em;
+            }
+              h1{
+                font-size: 2em;
+            }
+        </style>
+    </head>
+ 
+   <header  >
+        <h1 >DOKUMENTACIJA</h1>
+   
+
+
+    </header>
+
+
+    <body >
+            <nav >
+        <ul >
+            <li><a href="index.php">Početna stranica</a></li>
+            <li><a href="autor.php">Autor</a> </li>
+            <li><a href="galerija.php">Izložbe</a> </li>
+            <li><a href="obrasci/Prijava_vlaka.php">Prijava vlaka</a></li>
+            <li><a href="obrasci/prijava.php">Prijava</a> </li>
+            <li><a href="obrasci/registracija.php">Registracija</a> </li>
+        </ul>
+    </nav>
+
+
+        
+
+    <section id="sadrzaj" >
+ 
+        
+        <h1>Kratak opis projekta:</h1>
+        <h2>Sustav služi za upravljanje izložbom vlakova.</h2>
+        <h3>Uloge: Neregistrirani korisnik, Registrirani korisnik, Moderator, Administrator</h3>
+        <h4>Detaljne upute:</h4>
+        <h4>Administrator</h4>
+                <ul>
+                    <li> Pregledava/kreira/ažurira tematike izložbi vlakova (Lokomotive, Motorni vlakovi, Vlakovi
+velikih brzina, ...) i dodjeljuje moderatore. Jedan moderator može upravljati s više tematika
+izložba vlakova, a jedna tematika izložba vlakova može imati više moderatora.</li>
+                    <li> Može napraviti sigurnosnu kopiju (eng. backup) svih vlakova i materijala iz baze u obliku SQL
+                        skripte. Ne radi se sigurnosna kopija datoteka.</li>
+<li>Može vratiti podatke iz sigurnosne kopije pri čemu se brišu trenutni podaci u bazi. Za svaki
+vlak automatski se provjerava da li postoje fizičke datoteke materijala koje su postavljene od
+strane korisnika i ako ne šalje se zahtjev na e-mail korisniku da se ponovo postave. </li>
+<li>Administrator vidi statistiku korištenja sustava pristupa stranicama (min 5), uz mogućnost
+filtriranja po korisnicima i vremenskom razdoblju (od – do). </li>
+            </ul>
+<h4>Moderator</h4>
+<ul>
+<li>Pregledava/kreira/ažurira izložbe za tematike za koje je zadužen. Kod kreiranja definira
+datum početka izložbe i broj korisnika koji se mogu prijaviti na izložbu. Prijave nije moguće
+poslati nakon datuma početka izložbe. Ažuriranje je moguće do početka izložbe. Izložba može
+imati status: otvorene prijave, izložba u tijeku, otvoreno glasovanje i zatvoreno glasovanje.</li>
+<li> Za svaku izložbu zatvara/otvara glasovanje. Pobjednik se automatski određuje nakon
+    zatvaranja glasovanja.</li>
+<li>Vidi popis prijave vlakova za izložbu te potvrđuje/odbija prijave. Posebno su označene prijave
+    koje nisu obrađene.</li>
+</ul>
+<h4>Registrirani korisnik</h4>
+<ul>
+<li>Može pregledavati i poslati prijavu za dodavanje vlaka na izložbu. U prijavi se odabire izložbu
+i unosi naziv vlaka, pogon vlaka (npr. dizel, električni, parni, …), maksimalna brzina, broj
+sjedala i opis. Prijavu je moguće otkazati sve do datuma početka.</li>
+<li> Vidi popis prijavljenih vlakova po otvorenoj izložbi i može glasati za najbolji vlak ako
+    glasovanje otvoreno. Dopušten je najviše jedan glas po izložbi vlakova.</li>
+<li> Može postaviti materijale za vlak pri čemu bira vrstu materijala (slika, video, audio, ...). Ne
+    može dodati materijale sve dok moderator ne prihvati prijavu.</li>
+<li> Vidi galeriju izložbe vlakova. Može filtrirati po pogodnu vlaka i definirati koliko materijala se
+    prikazuje po stranici.</li>
+</ul>
+<h4>Neregistrirani korisnik</h4>
+<ul>
+    <li>Na početnoj stranici prikazana je statistika broja vlakova po izložbi vlakova.</li>
+    <li>Vidi popis prijavljenih korisnika grupirano po izložbama i označenim pobjednikom.</li>
+    <li>Odabirom pobjednika može vidjeti detalje pobjednika i sve materijale pobjednika.</li>
+    <li> Putem RSS kanala može se pratiti zadnjih 10 potvrđenih prijava po svakoj izložbi.</li>
+</ul>
+        
+        
+    </section>
+        
+        <section id="sadrzaj">
+            <h1>ERA DIJAGRAM</h1>
+            
+            <figure>
+                <a href="multimedija/era.png"> <img src="multimedija/era.png" style="width:70vw; height: 70vh;"></a>
+            </figure>
+        </section>
+        
+        <section id="sadrzaj">
+            <h1>POPIS I OPIS SKRIPTA, MAPA MJESTA I NAVIGACIJSKI DIJAGRAM</h1>
+            
+            <ul>
+                
+                <li>
+                    <p>Ifsnop - biblioteka za mysql import</p>
+                    <ul>
+                        <li>
+                    <p>Mysqldump - biblioteka za mysql export</p>
+                        </li>
+                    </ul>
+                </li>
+                    
+            </ul>
+            <ul>
+                
+                <li>
+                    <p>Izlozbe</p>
+                    <ul>
+                     
+                    <li><p>Dodaj_glas.php - skripta za dodavanje glasa za odredeni vlak od odredenog korisnika</p></li>
+                    <li><p>dodaj_moderatora.php - administratorsko dodavanje moderatora</p></li>
+                    <li><p>dodaj_tematiku.php - administratorsko dodavanje tematika izložbi</p></li>
+                    <li><p>izlozba.php - stranica određene izložbe</p></li>
+                    <li><p>obrisi.php - stranica za brisanje prijave vlaka (moderator)</p></li>
+                    <li><p>potvrdi.php - stranica za potvdivanje prijave vlaka (moderator)</p></li>
+                    <li><p>prijave.php - moderator, pregled prijava</p></li>
+                    <li><p>upload.php - upload datoteka za vlak</p></li>
+                    <li><p>vlak.php - stranica određenog vlaka</p></li>
+                        
+                    </ul>
+                </li>
+                    
+            </ul>            
+            <ul>
+                
+                <li>
+                    <p>PHPMailer - biblioteka za slanje e-pošte</p>
+                </li>
+                    
+            </ul>
+            <ul>
+                
+                <li>
+                    <p>backup - mapa u koju spremam backup baze</p>
+                    <ul>                     
+                    <li><p>backup.sql - backup baze podataka</p></li>
+                    </ul>
+                </li>
+                    
+            </ul>            
+            <ul>
+                
+                <li>
+                    <p>css</p>
+                    <ul>
+                     
+                    <li><p>lsedlanic.css - css datoteka</p></li>
+
+                        
+                    </ul>
+                </li>
+                    
+            </ul>
+            <ul>
+                
+                <li>
+                    <p>Js</p>
+                    <ul>
+                     
+                    <li><p>script.js - javascript datoteka</p></li>
+                    <li><p>script_jquery.js - jquery datoteka</p></li>
+
+                        
+                    </ul>
+                </li>
+                    
+            </ul>
+            <ul>
+                
+                <li>
+                    <p>Multimedija - slike</p>
+                    <ul>
+                     
+                    <li><p>Razne slike</p></li>
+
+                        
+                    </ul>
+                </li>
+                    
+            </ul>
+             <ul>
+                
+                <li>
+                    <p>Obrasci</p>
+                    <ul>
+                     
+                    <li><p>Deleteprijava.php - brisanje prijave vlaka</p></li>
+                    <li><p>prijava_vlaka.php - prijava vlaka</p></li>
+                    <li><p>activate.php - aktiviranje kor računa</p></li>
+                    <li><p>ajaxfile.php - pomocna skripta za ajax kod provjere korisnickog imena</p></li>
+                    <li><p>postojeca.php - postojeca priajva vlaka</p></li>
+                    <li><p>prijava.php - prijava na stranicu</p></li>
+                    <li><p>registracija.php - registracija na stranicu</p></li>
+                    <li><p>zab_lozinka.php - skripta za slanje nove lozinke</p></li>
+                        
+                    </ul>
+                </li>
+                    
+            </ul>
+            <ul>
+                    <li><p>Import.php - biblioteka za vračanje baze podataka</p></li>
+                    <li><p>autor.html - o autoru</p></li>
+                    <li><p>backup.php - skripta za stvaranje kopije baze</p></li>
+                    <li><p>config.php - spajanje na bazu</p></li>
+                    <li><p>dokumentacija.html - dokumentacija</p></li>
+                    <li><p>galerija.php - izložbe</p></li>
+                    <li><p>index.php - početna</p></li>
+                    <li><p>kreiraj_izlozbu.php - skripta za dodavanje izložbe (moderator)</p></li>
+                    <li><p>login_success.php - skripta za login</p></li>
+                    <li><p>logout.php - skripta za logout</p></li>
+                    <li><p>otkljucaj_korisnika.php - skripta za otkljucavanje korisnika</p></li>
+                    <li><p>restore.php - skripta za vraćanje baze podataka</p></li>
+                    <li><p>zakljucaj_korisnika.php - skripta za zakljucavanje korisnika</p></li>
+                    
+            </ul>         
+            <h1>Navigacijski dijagram   </h1>
+                        <figure>
+                            <a href="multimedija/navigacijski.PNG"> <img src="multimedija/navigacijski.PNG" style="width:70vw; height: 70vh;"></a>
+            </figure>
+        </section>
+        
+        <section id="sadrzaj">
+            <h1>POPIS I OPIS KORIŠTENIH TEHNOLOGIJA I ALATA</h1>
+            <h2>Apache NetBeans</h2>
+            <p>Apache NetBeans vrhunski je Apache projekt posvećen pružanju čvrstih proizvoda za razvoj softvera (Apache NetBeans IDE i Apache NetBeans Platform) koji se bave potrebama programera, korisnika i tvrtki koji se oslanjaju na NetBeans kao osnovu za svoje proizvode; posebno kako bi im se omogućilo da ove proizvode razvijaju brzo, učinkovito i jednostavno iskorištavanjem snaga Java platforme i drugih relevantnih industrijskih standarda.
+
+Dva osnovna proizvoda, Apache NetBeans IDE i Apache NetBeans Platform, besplatni su za komercijalnu i nekomercijalnu upotrebu, pod Apache licencom . Izvorni kôd za obje dostupan je svima za ponovnu upotrebu prema potrebi, u skladu s uvjetima korištenja.
+
+Projekt Apache NetBeans također je živahna zajednica u kojoj ljudi iz cijelog svijeta mogu postavljati pitanja, davati savjete, doprinositi i na kraju sudjelovati u uspjehu naših proizvoda. Na popisima za slanje i forume NetBeans pronaći ćete postove učenika, programera iz vodećih tvrtki i pojedinaca koji žele proširiti svoje vještine.</p>
+            <h2>XAMPP</h2>
+            <p>Xampp je potpuno besplatan open source serverski paket za jednostavnu intalaciju Apache servera na računare sa operativnim sistemom Windows, Linux ili OS X. Xampp je namenjem za upotrebu u lokalnoj mreži ne kao web server i služi pre svega programerima da kreiraju server radi
+testiranja svojih skripti, sajtova… Najprostije rečeno ukoliko nemate zakupljen hosting i domen, instalirajte xampp koji će simulirati sve to u off-line režimu.</p>
+            <h2>PHPmyAdmin</h2>
+            <p>Ovaj softver phpMyAdmin klasificiran je kao osnovni softverpa je pogodno za početnike koji žele upravljati bazom podataka na web poslužitelju. Njegova priroda otvorenog koda i više platformi (može raditi na svim uređajima) zasigurno je posebna prednost za phpMyAdmin, tako da je prirodno da je mogu koristiti oni koji još uče.
+
+Gotovo svi web poslužitelji također podržavajukoristite phpMyAdmin, a osim toga, čak iu izvanmrežnim uvjetima možete je upravljati. Pomozite samo za simulacijski softver poput XAMPP-a i pisanjem URL-a "localhost / phpmyadmin" tada možete upravljati bazom podataka pomoću softvera phpMyAdmin.</p>
+            <h2>Putty</h2>
+            <p>PuTTY je SSH i telnet klijent, izvorno ga je razvio Simon Tatham za Windows platformu. PuTTY je softver otvorenog koda koji je dostupan s izvornim kodom, a razvija ga i podržava grupa volontera.</p>
+            <h2>FileZilla</h2>
+            <p>FileZilla je besplatni softver, više-platformski FTP program, koji se sastoji od FileZilla Klijenta i FileZilla Servera. Dostupan je za operativne sisteme Windows, Linux i macOS, dok je instalacija servera moguća samo za Windows. Server i klijent podržavaju FTP i FTPS (FTP preko SSL/TLS ), dok se klijent može povezati i sa SFTP serverima</p>
+        </section>
+        
+                <section id="sadrzaj">
+            <h1>POPIS I OPIS TUĐIH MODULA/BIBLIOTEKA I KORIŠTENJE</h1>
+            <h2>PHPMailer</h2>
+            <a href="https://github.com/PHPMailer/PHPMailer">https://github.com/PHPMailer/PHPMailer</a>
+            <p>Biblioteka i skripte koje sam koristio za slanje e-pošte za verifikaciju računa te zaboravljene lozinke.</p>
+            <h2>dcblogdev -- sql-import</h2>
+            <a href="https://github.com/dcblogdev/sql-import ">https://github.com/dcblogdev/sql-import </a>
+            <p> Biblioteka i skripta koju sam koristio za spremanje kopije baze podataka u .sql datoteku.</p>
+            <h2>Ifsnop -- mysqldump-php</h2>
+            <a href="https://github.com/ifsnop/mysqldump-php ">https://github.com/ifsnop/mysqldump-php </a>
+            <p>Biblioteka i skripte koje sam koristio za vraćanje kopije baze podataka na stranicu. </p>
+        </section>
+          <section style=" right:0; top:0; position:absolute;">
+        <button style="width:10vw; height:5vh; font-size:2em;">Toggle Font</button>
+    </section>
+  
+        <script type="text/javascript">
+        document.querySelector('button').addEventListener("click", e=>{
+  document.body.classList.toggle("od");
+});
+        </script>    
+        
+    <footer >
+        <address style="font-weight: bold;">>Kontakt: <a href="mailto:lsedlanic@foi.hr">Leon Sedlanić</a></address>
+        <p>&copy; 2021. L. Sedlanić</p>
+
+    </footer>
+    </body>
+</html>

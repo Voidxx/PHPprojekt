@@ -1,0 +1,4 @@
+AuthType Basic
+AuthUserFile /var/www/webdip.barka.foi.hr/2020_projekti/WebDiP2020x080/privatno/user.txt
+AuthName "Admin?"
+Require valid-user
